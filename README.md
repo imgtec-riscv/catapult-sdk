@@ -3,18 +3,18 @@ Imagination Technologies' RISC-V Software Development Kit (Catapult SDK) is a cu
 
 ## Overview of the SDK
 The main components of the SDK are:
-- [gcc][2] and [LLVM][3] (Clang) compilers for RISC-V.  We regularly update these from the upstream open-source repositories, and thoroughly test the released binaries with extensive test suites.  The LLVM compiler also contains modifications from our own compiler team, (particularly, optimizations for Imagination Technologies CPUs) which may not yet have been upstreamed.
-- C libraries.  We offer [picolibc][4] for bare-metal development, and both [glibc][5] and [musl][6] for linux development.  Again, these may contain performance enhancements from our developer team which have not yet been upstreamed.
+- [gcc][2] and [LLVM][3] (Clang) compilers for RISC-V.  We regularly update these from the upstream open-source repositories, and thoroughly test the released binaries with extensive test suites.  The LLVM compiler also contains modifications from our own compiler team which may not yet have been upstreamed (e.g. optimizations for Imagination Technologies CPUs).
+- C/C++ libraries.  We offer [picolibc][4] for bare-metal development, and both [glibc][5] and [musl][6] for Linux development.  Again, these may contain performance enhancements from our developer team which have not yet been upstreamed.
 - [gdb][7] and [OpenOCD][8] for RISC-V debugging; and files to configure these with knowledge of all supported platforms.
 - [binutils][9] and [pyelftools][10] for analysis and manipulation of .elf files etc.
-- Source code such as examples, platform-specific header files, and the [FreeRTOS][11] Operating system.
+- Source code such as examples, platform-specific header files, and the [FreeRTOS][11] operating system.
 - System start-up code for all supported platforms.
 - **ldgen**, a tool for auto-generating linker scripts, providing an easy way of creating customized code and data memory layouts.
 - Functional models of Imagination Technologies Alpine and Catapult CPUs, and the [VeeR Instruction Set Simulator][1] (Whisper).
 - **Catapult Studio**, our Integrated Development Environment, described in the next section.
 
 ## The Catapult Studio IDE
-Catapult Studio is a customized version of Visual Studio Code, one of today's most popular development environments.  Our customizations focus on the needs of embedded software developers working with remote RISC-V targets using C.  Some of the main features are:
+Catapult Studio is a customized version of [Visual Studio Code][14], one of today's most popular development environments.  Our customizations focus on the needs of embedded software developers working with remote RISC-V targets using C/C++.  Some of the main features are:
 - Close integration with the rest of the SDK.
 - Automated systems for connecting to remote RISC-V platforms and launching debugging sessions on such targets (typically via JTAG / OpenOCD).
 - Full-featured, editable memory window.
@@ -24,18 +24,22 @@ Catapult Studio is a customized version of Visual Studio Code, one of today's mo
 - Disassembly window: shows disassembly interspersed with high-level code and allows breakpointing and stepping through the assembler code.
 - Platform selection feeds knowledge of the platform (such as memory and register maps) into gdb, OpenOCD and the other Catapult Studio windows; and optionally into your build.
 - Graphical interface for specifying platform characteristics and connection methods; with facility to create your own platforms or install new platforms through a platform support pack.
-- Strong support for the Cmake build system; although will work with other build systems of your choice.
-- "Intellisense" for editing C code, with syntax highlighting, jump between references, tool-tips with help on function prototypes, auto-completion, and more.
+- Strong support for the CMake build system; although will work with other build systems of your choice.
+- "Intellisense" for editing C/C++ code, with syntax highlighting, jump between references, tool-tips with help on function prototypes, auto-completion, and more.
 
 ![](illustrations/Catapult_Studio.png "Catapult Studio")
 *Catapult Studio*
 
 ## Installing and Using the SDK
-Download the installer for the host platform of your choice from our releases area.  Supported host systems are: Ubuntu 64-bit x86 (18.04/20.04/22.04); CentOS 7 64-bit x86; Windows 10/11; and MacOS (Catalina onwards, x86 and Arm M1).  Then follow the instructions below to install.
+Download the installer for the host platform of your choice from our releases area.  Supported host systems are: Ubuntu 64-bit x86 (18.04/20.04/22.04); CentOS 7 x86_64; Windows 10/11 64-bit; and MacOS (Catalina onwards, x86 and Arm M1).  Then follow the instructions below to install.
 
 Following the installation you will find full details on how to use the SDK in the user documentation which can be accessed in 2 ways:
 - Within Catapult Studio, select Help→Get Started, then click the link for the Catapult SDK Documentation. Alternatively, you can select "Catapult: Open SDK Documentation" from the command palette (CTRL-P, or CMD-P on Mac).
-- Outside of Catapult Studio, on MacOS or Linux click the docs link under catapult-sdk_examples/{version} in your home area.  On Windows, you will find a .pdf file in the docs directory of the toolkit installation.
+- Outside of Catapult Studio, on MacOS or Linux, click the docs link under catapult-sdk_examples/{version} in your home area.  On Windows, you will find a .pdf file in the docs directory of the toolkit installation.
+
+To use the SDK tools (as listed above) on the command line, you should add the bin directory within the SDK installation (catapult-sdk.app/Contents/Helpers/bin on mac)  to the beginning of your PATH environment variable.
+
+The SDK also includes the [cmake][12] and [ninja][13] build tools.  If you would like to use the SDK versions of these, add the build/bin directory (catapult-sdk.app/Contents/Helpers/build/bin on mac) to PATH also.
 
 ### Linux .deb Installation
 Use apt:
@@ -83,3 +87,6 @@ Apple's XCode command-line developer tools are a requirement for using the toolk
 [9]: https://www.gnu.org/software/binutils
 [10]: https://github.com/eliben/pyelftools
 [11]: https://www.freertos.org/
+[12]: https://cmake.org
+[13]: https://ninja-build.org
+[14]: https://code.visualstudio.com/
