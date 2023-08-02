@@ -31,7 +31,7 @@ Catapult Studio is a customized version of [Visual Studio Code][14], one of toda
 *Catapult Studio*
 
 ## Installing and Using the SDK
-Download the installer for the host platform of your choice from our releases area.  Supported host systems are: Ubuntu x86_64 (18.04/20.04/22.04); CentOS 7 x86_64; Windows 10/11 64-bit; and MacOS (Catalina onwards, x86 and Arm M1).  Then follow the instructions below to install.
+Download the installer for the host platform of your choice from our [releases area][15].  Supported host systems are: Ubuntu x86_64 (18.04/20.04/22.04); CentOS 7 x86_64; Windows 10/11 64-bit; and MacOS (Catalina onwards, x86 and Arm M1).  Then follow the instructions below to install.
 
 Following the installation you will find full details on how to use the SDK in the user documentation which can be accessed in 2 ways:
 - Within Catapult Studio, select Help→Get Started, then click the link for the Catapult SDK Documentation. Alternatively, you can select "Catapult: Open SDK Documentation" from the command palette (CTRL-P, or CMD-P on Mac).
@@ -90,3 +90,4 @@ Apple's XCode command-line developer tools are a requirement for using the toolk
 [12]: https://cmake.org
 [13]: https://ninja-build.org
 [14]: https://code.visualstudio.com/
+[15]: https://github.com/imgtec-riscv/catapult-sdk/releases
