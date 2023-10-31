@@ -8,9 +8,11 @@ The main components of the SDK are:
 - [gdb][7] and [OpenOCD][8] for RISC-V debugging; and files to configure these with knowledge of all supported platforms.
 - [binutils][9] and [pyelftools][10] for analysis and manipulation of .elf files etc.
 - Source code such as examples, platform-specific header files, and the [FreeRTOS][11] operating system.
+- [Zephyr][16] operating system examples
 - System start-up code for all supported platforms.
 - **ldgen**, a tool for auto-generating linker scripts, providing an easy way of creating customized code and data memory layouts.
 - Functional models of Imagination Technologies Alpine and Catapult CPUs, and the [VeeR Instruction Set Simulator][1] (Whisper).
+- [QEMU][17] RISC-V system emulators (32- and 64-bit) and linux user-mode emulator.
 - **Catapult Studio**, our Integrated Development Environment, described in the next section.
 
 ## The Catapult Studio IDE
@@ -91,3 +93,5 @@ Apple's XCode command-line developer tools are a requirement for using the toolk
 [13]: https://ninja-build.org
 [14]: https://code.visualstudio.com/
 [15]: https://github.com/imgtec-riscv/catapult-sdk/releases
+[16]: https://zephyrproject.org/
+[17]: https://www.qemu.org/
