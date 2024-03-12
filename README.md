@@ -15,7 +15,7 @@ The main components of the SDK are:
 - [QEMU][17] RISC-V system emulators (32- and 64-bit) and linux user-mode emulator.
 
 ## The Catapult Studio Visual Studio Code Extensions
-We offer two extensions for [Visual Studio Code][14] (VSCode): the **Catapult Studio extension** and the **Catapult debug adaptor**.  These extensions can be downloaded from our [releases area][15] and installed into VSCode using the "Install from VSIX.." option on the Extensions tab.  These extensions integrate closely with a Catapult SDK installation, and support the needs of embedded software developers working with remote RISC-V targets using C/C++.  Some of the main features are:
+We offer two extensions for [Visual Studio Code][14] (VSCode): the [Catapult Studio extension][18] and the [Catapult debug adaptor][19].  We recommend installing these extensions as part of the [Catapult Studio Extension Pack][20], available on the VSCode Marketplace.  Alternatively they can be downloaded from our [releases area][15] and installed into VSCode using the "Install from VSIX.." option on the Extensions tab.  These extensions integrate closely with a Catapult SDK installation, and support the needs of embedded software developers working with remote RISC-V targets using C/C++.  Some of the main features are:
 - Automated systems for connecting to remote RISC-V platforms and launching debugging sessions on such targets (typically via JTAG / OpenOCD).
 - Full-featured, editable memory window.
 - Peripheral registers window.
@@ -89,3 +89,6 @@ Apple's XCode command-line developer tools are a requirement for using the toolk
 [15]: https://github.com/imgtec-riscv/catapult-sdk/releases
 [16]: https://zephyrproject.org/
 [17]: https://www.qemu.org/
+[18]: https://marketplace.visualstudio.com/items?itemName=ImaginationTech.catapult-studio
+[19]: https://marketplace.visualstudio.com/items?itemName=ImaginationTech.imgdebug
+[20]: https://marketplace.visualstudio.com/items?itemName=ImaginationTech.catapult-studio-pack
