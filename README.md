@@ -29,7 +29,7 @@ We offer two extensions for [Visual Studio Code][14] (VSCode): the [Catapult Stu
 *Catapult Studio*
 
 ## Installing and Using the SDK
-Download the installer for the host platform of your choice from our [releases area][15].  Supported host systems are: Ubuntu x86_64 (18.04/20.04/22.04); CentOS 7 x86_64; Windows 10/11 64-bit; and MacOS (Catalina onwards, x86 and Arm M1).  Then follow the instructions below to install.
+Download the installer for the host platform of your choice from our [releases area][15].  Supported host systems are: Ubuntu x86_64 (18.04/20.04/22.04); RedHat Enterprise 8 x86_64; Windows 10/11 64-bit; and MacOS (Catalina onwards, x86 and Arm M1).  Then follow the instructions below to install.
 
 Following the installation you will find full details on how to use the SDK in the user documentation which can be accessed in 2 ways:
 - With the Catapult Studio extension installed into VSCode, you can select "Catapult: Open SDK Documentation" from the command palette (CTRL-P, or CMD-P on Mac).
@@ -48,7 +48,7 @@ sudo apt install catapult-sdk_{version}.deb
 ```
 
 ### Linux .rpm Installation
-On CentOS 7, use yum:
+On RedHat, use yum:
 ```
 sudo yum localinstall catapult-sdk-{version}-1.x86_64.rpm
 ```
@@ -60,7 +60,7 @@ To unpack the contents of the RPM to a local directory without needing root priv
 ```
 rpm2cpio catapult-sdk-{version}-1.x86_64.rpm | cpio -id
 ```
-This will extract the SDK into a directory opt/imgtec/catapult-sdk_{version} under the current working directory. Note that this works on Ubuntu as well as CentOS.
+This will extract the SDK into a directory opt/imgtec/catapult-sdk_{version} under the current working directory. Note that this works on Ubuntu as well as RedHat.
 
 ### Windows Installation
 To install on Windows, simply double-click the catapult-sdk_setup_win32_x64_{version}.exe application and the installer wizard will guide you through the setup process.
@@ -71,6 +71,22 @@ You will be given the option to install for all users (that requires administrat
 To allow the install, first go to the Security and Privacy section of System Preferences, General tab, and enable "Allow apps downloaded from Apple and selected developers" (if you haven't already done that previously).  Then simply double-click the installer package and you will be guided through the install process. The application installs to the /opt/imgtec folder by default.
 
 Apple's XCode command-line developer tools are a requirement for using the toolkit.  If you don't already have these installed on your system, the installer will prompt to offer to install them.
+
+### Catapult Studio Extension Pack Installation (All Platforms)
+First [download Visual Studio Code][21] for your platform, if you don't already have it.
+
+From the Extensions tab, search for Catapult in the "Search Extensions in Marketplace" box.  We recommend installing the Catapult Studio Extension Pack, which will install the Catapult Studio extension, the Catapult Debug Adaptor, and some related third-party extensions, as follows:
+- [cpptools][23] from Microsoft.  This includes a **language server** providing "Intellisense" for C/C++.
+- [CMake-tools][24] from Microsoft.  This integrates closely with Catapult Studio to support building and launching for CMake projects (including the examples provided with Catapult SDK).
+- [CMake][26] language support including syntax highlighting, code completion etc.
+- [Yaml][27] language support from Redhat.
+- [Linkerscript][28] language support.
+- [RISC-V Assembler][29] language support.
+- [Serial Monitor][30] from Microsoft.
+
+Alternatively, for a minimal install, you can just install the Catapult Studio extension, the Catapult Debug Adaptor, and the CMake Tools extension.
+
+Note that you must have the SDK installed for Catapult Studio to work correctly.
 
 [1]: https://github.com/chipsalliance/VeeR-ISS
 [2]: https://gcc.gnu.org/
@@ -92,3 +108,13 @@ Apple's XCode command-line developer tools are a requirement for using the toolk
 [18]: https://marketplace.visualstudio.com/items?itemName=ImaginationTech.catapult-studio
 [19]: https://marketplace.visualstudio.com/items?itemName=ImaginationTech.imgdebug
 [20]: https://marketplace.visualstudio.com/items?itemName=ImaginationTech.catapult-studio-pack
+[21]: https://code.visualstudio.com/download
+
+[23]: https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools
+[24]: https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools
+[25]: https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd
+[26]: https://marketplace.visualstudio.com/items?itemName=twxs.cmake
+[27]: https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
+[28]: https://marketplace.visualstudio.com/items?itemName=ZixuanWang.linkerscript
+[29]: https://marketplace.visualstudio.com/items?itemName=zhwu95.riscv
+[30]: https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-serial-monitor
