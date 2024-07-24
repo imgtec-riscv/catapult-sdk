@@ -29,7 +29,7 @@ We offer two extensions for [Visual Studio Code][14] (VSCode): the [Catapult Stu
 *Catapult Studio*
 
 ## Installing and Using the SDK
-Download the installer for the host platform of your choice from our [releases area][15].  Supported host systems are: Ubuntu x86_64 (18.04/20.04/22.04); RedHat Enterprise 8 x86_64; Windows 10/11 64-bit; and MacOS (Catalina onwards, x86 and Arm M1).  Then follow the instructions below to install.
+Download the installer for the host platform of your choice from our [releases area][15].  Supported host systems are: Ubuntu x86_64 (18.04/20.04/22.04); RedHat Enterprise 8 x86_64; Windows 10/11 64-bit; and MacOS (Monterey onwards, x86 and Arm M1).  Then follow the instructions below to install.
 
 Following the installation you will find full details on how to use the SDK in the user documentation which can be accessed in 2 ways:
 - With the Catapult Studio extension installed into VSCode, you can select "Catapult: Open SDK Documentation" from the command palette (CTRL-P, or CMD-P on Mac).
