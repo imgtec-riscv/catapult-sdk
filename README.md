@@ -40,11 +40,11 @@ To use the SDK tools (as listed above) on the command line, you should add the b
 The SDK also includes the [cmake][12] and [ninja][13] build tools.  If you would like to use the SDK versions of these, add the build/bin directory (/opt/imgtec/catapult-sdk/Helpers/build/bin on mac) to PATH also.
 
 ### Linux .deb Installation
-Use apt:
+Use apt. When located in the same directory as the .deb file:
 ```
 sudo apt update
 sudo apt upgrade
-sudo apt install catapult-sdk_{version}.deb
+sudo apt install ./catapult-sdk_{version}.deb
 ```
 
 ### Linux .rpm Installation
