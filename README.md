@@ -48,7 +48,11 @@ sudo apt install ./catapult-sdk_{version}.deb
 ```
 
 ### Linux .rpm Installation
-On RedHat, use yum:
+The RPM installer has been split into 2 files as it is otherwise too large to be hosted on github.  You should download the .00 and .01 files then concatenate them using:
+```
+cat catapult-sdk-{version}-1.x86_64.rpm.* > catapult-sdk-{version}-1.x86_64.rpm
+```
+Then, on RedHat, use yum:
 ```
 sudo yum localinstall catapult-sdk-{version}-1.x86_64.rpm
 ```
@@ -63,7 +67,7 @@ rpm2cpio catapult-sdk-{version}-1.x86_64.rpm | cpio -id
 This will extract the SDK into a directory opt/imgtec/catapult-sdk_{version} under the current working directory. Note that this works on Ubuntu as well as RedHat.
 
 ### Windows Installation
-To install on Windows, simply double-click the catapult-sdk_setup_win32_x64_{version}.exe application and the installer wizard will guide you through the setup process.
+To install on Windows, first download the 3 files associated with the installer (.exe file + 2 .bin files).  Then double-click the catapult-sdk_setup_win32_x64_{version}.exe application and the installer wizard will guide you through the setup process.
 
 You will be given the option to install for all users (that requires administrator privileges) or for just yourself (which does not).
 
